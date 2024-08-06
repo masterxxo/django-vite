@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'gol.urls'
+ROOT_URLCONF = 'gol.apps.urls'
 
 TEMPLATES = [
     {

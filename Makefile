@@ -3,6 +3,6 @@
 dependencies:
 	pip install -U pip && pip install pip-tools
 
-	pip-compile requirements/base.in
+	pip-compile Docker/backend/requirements/base.in
 
 REQUIREMENTS_FILE = base.txt
