@@ -1,4 +1,4 @@
-.PHONY: dependencies
+.PHONY: dependencies build up down
 
 dependencies:
 	pip install -U pip && pip install pip-tools
@@ -6,3 +6,12 @@ dependencies:
 	pip-compile Docker/backend/requirements/base.in
 
 REQUIREMENTS_FILE = base.txt
+
+build:
+	bash scripts/build.sh
+
+up:
+	bash gol/scripts/start.sh
+
+down:
+	docker compose down

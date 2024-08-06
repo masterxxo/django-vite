@@ -1,0 +1,7 @@
+services:
+  django:
+    image: gol:backend
+    ports:
+      - 8000:8000
+    volumes:
+      - '../gol/:/app/'
