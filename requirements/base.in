@@ -1,5 +1,6 @@
 # Application
 Django==4.2.11
+django-vite==3.0.4
 
 # Database
 psycopg2-binary==2.9.9
