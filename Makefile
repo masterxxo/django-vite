@@ -1,4 +1,4 @@
-.PHONY: dependencies build up down
+.PHONY: dependencies build up down migrate
 
 dependencies:
 	pip install -U pip && pip install pip-tools
@@ -15,3 +15,6 @@ up:
 
 down:
 	docker compose down
+
+migrate:
+	docker exec -it gol-django-1 bash -c "python manage.py migrate"
