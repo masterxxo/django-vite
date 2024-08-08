@@ -1,4 +1,4 @@
-.PHONY: dependencies build up down migrate
+.PHONY: dependencies build up down migrate createsuperuser
 
 dependencies:
 	pip install -U pip && pip install pip-tools
@@ -18,3 +18,6 @@ down:
 
 migrate:
 	docker exec -it gol-django-1 bash -c "python manage.py migrate"
+
+createsuperuser:
+	docker exec -it gol-django-1 python manage.py createsuperuser
