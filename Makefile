@@ -11,6 +11,7 @@ build:
 	bash scripts/build.sh
 
 up:
+	make build
 	bash gol/scripts/start.sh
 
 down:
