@@ -15,7 +15,7 @@ up:
 	bash gol/scripts/start.sh
 
 down:
-	docker compose down
+	bash gol/scripts/stop.sh
 
 migrate:
 	docker exec -it gol-django-1 bash -c "python manage.py migrate"

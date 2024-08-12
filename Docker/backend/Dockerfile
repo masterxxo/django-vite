@@ -17,4 +17,4 @@ ENV \
 COPY ./requirements/base.txt ./base.txt
 RUN pip install -r ./base.txt
 
-CMD python manage.py runserver
+CMD python manage.py runserver 0.0.0.0:8000
