@@ -1,7 +1,7 @@
 .PHONY: dependencies build up down migrate createsuperuser
 
 dependencies:
-	pip install -U pip && pip install pip-tools
+	pip3 install -U pip && pip3 install pip-tools
 
 	pip-compile Docker/backend/requirements/base.in
 
