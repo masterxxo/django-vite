@@ -12,10 +12,10 @@ build:
 
 up:
 	make build
-	bash gol/scripts/start.sh
+	bash scripts/start.sh
 
 down:
-	bash gol/scripts/stop.sh
+	bash scripts/stop.sh
 
 migrate:
 	docker exec -it gol-django-1 bash -c "python manage.py migrate"

@@ -14,7 +14,9 @@ ENV \
   PIP_DISABLE_PIP_VERSION_CHECK=on \
   PIP_DEFAULT_TIMEOUT=100
 
-COPY ./requirements/base.txt ./base.txt
-RUN pip install -r ./base.txt
+ADD ./requirements/base.txt /app/base.txt
 
+RUN pip install -r base.txt
+
+SHELL ["/bin/bash", "-c"]
 CMD python manage.py runserver 0.0.0.0:8000
