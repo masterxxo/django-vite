@@ -29,7 +29,7 @@ SECRET_KEY = "django-insecure-gu-3o)6g1hl*lf1zdsszv)_x0ypx54w96ky=6__460i%8up@m=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1"]
 
 
 # Application definition
@@ -70,6 +70,7 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
             ],
+            "debug": DEBUG,
         },
     },
 ]
@@ -134,7 +135,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 DJANGO_VITE = {
     "default": {
         "dev_mode": config("DJANGO_VITE_DEV_MODE", default=False, cast=bool),
-        "dev_server_port": config("DJANGO_VITE_DEV_SERVER_PORT", default="5173"),
+        "dev_server_port": config("DJANGO_VITE_DEV_SERVER_PORT", default="5175"),
     }
 }
 

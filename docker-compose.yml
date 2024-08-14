@@ -5,6 +5,8 @@ services:
       - 8000:8000
     volumes:
       - './gol/:/app/'
+    env_file:
+      - "./.env"
 
   frontend:
     image: gol:frontend
@@ -12,6 +14,7 @@ services:
     ports:
       - '${DJANGO_VITE_DEV_SERVER_PORT}:${DJANGO_VITE_DEV_SERVER_PORT}'
     volumes:
+      - './gol/vite.config.js:/app/vite.config.js'
       - './gol:/app/'
     env_file:
       - "./.env"

@@ -11,7 +11,7 @@ const postcssConfig = {
   };
 
 export default defineConfig(({ mode }) => {
-    const env = loadEnv(mode, process.cwd());
+    const env = loadEnv(mode, process.cwd(), '');
 
     const INPUT_DIR = './assets';
     const OUTPUT_DIR= './dist';
@@ -28,8 +28,8 @@ export default defineConfig(({ mode }) => {
             postcss: postcssConfig,
         },
         server: {
-            host: env.DJANGO_VITE_DEV_SERVER_HOST,
-            port: env.DJANGO_VITE_DEV_SERVER_PORT,
+            host: env.DJANGO_VITE_DEV_SERVER_HOST || '0.0.0.0',
+            port: env.DJANGO_VITE_DEV_SERVER_PORT || 5175,
         },
         build: {
             manifest: true,
@@ -37,7 +37,7 @@ export default defineConfig(({ mode }) => {
             outDir: resolve(OUTPUT_DIR),
             rollupOptions: {
                 main: join(INPUT_DIR, '/js/app.js'),
-                css: join(INPUT_DIR, '/css/app.css'),
+                css: join(INPUT_DIR, '/css/main.css'),
             },
         }
     }
