@@ -94,5 +94,8 @@ GitHub.sublime-settings
 !.vscode/extensions.json 
 .history
 
+# Mac OS files
+.DS_Store
+
 # Frontend
 node_modules
